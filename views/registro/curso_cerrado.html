@@ -1,0 +1,57 @@
+{{extend 'layout1.html'}}
+<style>
+    body{
+        background-color:#d66a6a
+
+    }
+    #mensaje{
+       background-color:#d88668
+    }
+    #aceptar{
+       background-color:#6f7aaf
+    }
+    
+    
+</style>
+
+{{block header}}
+
+{{end}}
+<div class="ibox-content">
+  <script type="text/javascript">
+$(document).ready(function(){
+  
+    $("#myModal").modal('show');
+  
+});
+</script>
+<div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                
+                <i class="fa fa-warning modal-icon"></i>
+                <h3 class="modal-title text-warning"><br></h3>
+                
+            </div>
+            <div class="modal-body">
+                
+                <div class="alert alert-warning"id="mensaje">
+                    <h3><p style="text-align:justify;   "><strong>YA NO EXISTEN CUPOS PARA EL  EVENTO
+                        "HACIA UN CAMBIO DE CULTURA VIAL". <br> GRACIAS POR SU INTERES </strong><strong> </h3>
+
+                    
+                </div>
+                   
+            </div>
+            <div class="modal-footer">  
+                   
+                 
+                <a href="{{=URL('registro', 'hay')}}" class=" btn btn-success btn-xs" id="aceptar" >Aceptar</a>
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+</div>        

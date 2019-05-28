@@ -1,0 +1,64 @@
+{{extend 'layout1.html'}}
+<style>
+    #mensaje{
+       background-color:#0ee2a5;
+       color:#5e5f5b;
+       }
+    
+    
+    body{
+        background-color:#d66a6a
+
+        }
+    .label-default {
+    background-color: #d66a6a   ;
+    }
+
+
+    
+</style>
+
+{{block header}}
+
+{{end}}
+<div class="ibox-content">
+  <script type="text/javascript">
+$(document).ready(function(){
+  
+    $("#myModal").modal('show');
+  
+});
+</script>
+<div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                
+                <i class="fa fa-warning modal-icon"></i>
+                <h3 class="modal-title text-warning"><br></h3>
+                
+            </div>
+            <div class="modal-body">
+                
+                <div class="alert alert-warning"id="mensaje">
+                    <h3><p><strong>La inscripción al evento: “HACIA UN CAMBIO DE CULTURA VIAL”, a realizarse el día {{=fecha}} 
+                        En la Escuela Hipolito Yrigoyen Nº46 ubicada  en calle Florida 300 Barrio la Tablada
+                        A hs 7:30,<br>
+                         "Fue exitosa"
+                    </strong><strong> </h3>
+                    
+                </div>
+                   
+            </div>
+            <div class="modal-footer">  
+                   
+                 
+                <a href="{{=URL('registro', 'hay')}}" class=" btn btn-success btn-xs" >Aceptar</a>
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+</div>         
+

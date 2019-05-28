@@ -1,0 +1,45 @@
+{{extend 'layout.html'}}
+
+
+<br>
+
+<div class="container">
+    <div class="row">
+        
+            <div class="panel panel-primary well">
+              <div class="panel-heading">Panel Administrativo</div>
+              <div class="panel-body">
+                    <div class="col-md-2">
+                        <a href="{{=URL(r=request,f='../../registro/hay.html')}}" class="thumbnail">
+                          <img src="{{=URL('static','images/inscripcion.png')}}" alt="">
+                        </a>
+                        <h6><p class="text-center text-info">Registro al Evento</p></h6>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="{{=URL(r=request,f='../../cupo/cupo.html')}}" class="thumbnail">
+                          <img src="{{=URL('static','images/cupo.png')}}" alt="">
+                        </a>
+                        <h6><p class="text-center text-info">Definir Cupo</p></h6>
+                    </div>
+
+                    <div class="col-md-2">
+                        <a href="{{=URL(r=request,f='../../imprimir/imprimir.html')}}" class="thumbnail">
+                          <img src="{{=URL('static','images/imprimir.png')}}" alt="">
+                        </a>
+                        <h6><p class="text-center text-info">Imprimir Inscriptos</p></h6>
+                    </div>
+                     
+                      
+                      <div class="col-md-2">
+                        <a href="{{=URL(r=request,f='../../consulta/consulta.html')}}" class="thumbnail">
+                          <img src="{{=URL('static','images/lupa.png')}}" alt="">
+                        </a>
+                        <h6><p class="text-center text-info">Buscar Cursante</p></h6>
+                    </div>
+                     
+              </div>
+            </div>
+    </div>
+
+  
+</div>

@@ -1,0 +1,38 @@
+{{extend 'layout.html'}}
+
+
+
+<br>
+
+<div class="container">
+    <div class="row">
+        
+            <div class="panel panel-primary well">
+              <div class="panel-heading">Panel Administrativo</div>
+              <div class="panel-body">
+                    <div class="col-md-2">
+                        <a href="{{=URL(r=request,f='../../imprimir/print_fecha1.html')}}" class="thumbnail">
+                          <img src="{{=URL('static','images/11.jpg')}}" alt="">
+                        </a>
+                        <h6><p class="text-center text-info">IMPRIMIR FECHA 11/06/2019</p></h6>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="{{=URL(r=request,f='../../imprimir/print_fecha2.html')}}" class="thumbnail">
+                          <img src="{{=URL('static','images/12.jpg')}}" alt="">
+                        </a>
+                        <h6><p class="text-center text-info">IMPRIMIR FECHA 12/06/2019</p></h6>
+                    </div>                   
+                      
+                      <div class="col-md-2">
+                        <a href="{{=URL(r=request,f='../../imprimir/todo.html')}}" class="thumbnail">
+                          <img src="{{=URL('static','images/imprimir.png')}}" alt="">
+                        </a>
+                        <h6><p class="text-center text-info">IMPRIMIR LISTADO GENERAL</p></h6>
+                    </div>
+                     
+              </div>
+            </div>
+    </div>
+
+  
+</div>

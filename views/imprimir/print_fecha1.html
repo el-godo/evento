@@ -1,0 +1,63 @@
+{{extend 'layout2.html'}}
+
+<style>
+  #tabla{font-size: 11px;
+
+  }
+</style>
+
+<div class="panel-body">
+	<!-- Table -->
+  <table class="table">
+  	<strong><p align="center">LISTADO DE ASISTENCIA {{=evento.fecha}} </p></strong>
+  	<br>
+  	<tr>
+   		<th>NOMBRE Y APELLIDO</th>
+   		<th>DNI</th>
+   		<th>TELEFONO</th>
+   		<th>ESCUELA</th>
+   		<th>FIRMA</th>
+
+   </tr>
+
+
+  
+
+    
+  </div>
+  
+  <!-- Default panel contents -->
+{{for x in set_evento:}}
+	{{nombre=x.nom_ape}}
+	{{dni=x.dni}}
+	{{tel=x.telefono}}
+	{{escuela=x.escuela}}
+	{{fecha=x.fecha}}
+	{{titulo = "Listado de asistencia fecha 11/06/2019"}}
+	<tr id="tabla">
+  <td>{{=nombre}}</td>
+ 
+   <td>{{=dni}}</td>
+   <td>{{=tel}}</td>
+   <td>{{=escuela}}</td>
+   <td></td>
+   
+  </tr>
+  
+  
+  
+
+  
+</div>
+{{pass}}
+</table>
+</div>
+
+	
+    
+
+ 
+
+
+
+

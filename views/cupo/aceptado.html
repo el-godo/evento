@@ -1,0 +1,44 @@
+{{extend 'layout.html'}}
+<h2>CUPO DE EVENTO</h2>
+{{block header}}
+
+{{end}}
+<div class="ibox-content">
+  <script type="text/javascript">
+$(document).ready(function(){
+  
+    $("#myModal").modal('show');
+  
+});
+</script>
+<div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                
+                <i class="fa fa-warning modal-icon"></i>
+                <h3 class="modal-title text-warning"><br></h3>
+                
+            </div>
+            <div class="modal-body">
+                
+                <div class="alert alert-warning">
+                    <h2><p><strong>SU PEDIDO DE CUPO FUE GENERADO CON EXITO  </strong><strong> </h2>
+                        <h4><p><strong>Y ES DE cupo1: <h3>{{=cupo1}}</h3> <h4>LUGARES   <br>
+                            Y ES DE cupo2: <h3>{{=cupo2}}</h3> <h4>LUGARES </h4></
+                            strong></p></h4>
+                    
+                </div>
+                   
+            </div>
+            <div class="modal-footer">  
+                   
+                 
+                <a href="{{=URL('default', 'principal')}}" class=" btn btn-success btn-xs" >Aceptar</a>
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+</div>         

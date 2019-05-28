@@ -1,0 +1,659 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.IOError'> [Errno 2] No such file or directory: u'/home/decodigo/Documentos/python/prueba.pdf'"
+p3
+sS'layer'
+p4
+S'D:\\web2py\\applications\\evento\\controllers/imprimir.py'
+p5
+sS'code'
+p6
+S'@auth.requires_login()\ndef imprimir():\n\n\treturn dict()\ndef print_fecha1():\n\tfrom reportlab.platypus import *\n\tfrom reportlab.lib.styles import getSampleStyleSheet\n\tfrom reportlab.rl_config import defaultPageSize\n\tfrom reportlab.lib.units import inch, mm\n\tfrom reportlab.lib.enums import TA_LEFT, TA_RIGHT, TA_CENTER, TA_JUSTIFY\n\tfrom reportlab.lib import colors\n\tfrom uuid import uuid4\n\tfrom cgi import escape\n\tfrom reportlab.platypus import (SimpleDocTemplate, PageBreak, Image, Spacer,\n\tParagraph, Table, TableStyle)\n\tfrom reportlab.lib.styles import getSampleStyleSheet\n\tfrom reportlab.lib.pagesizes import A4\n\tfrom reportlab.lib import colors\n\tfrom reportlab.lib.pagesizes import letter\n\timport os\n\timport json \n\n\tset_evento=db(db.evento.fecha=="11-06-2019").select()\n\n\tfor x in set_evento:\n\t\tnombre=x.nom_ape\n\t\tdni=x.dni\n\t\ttel=x.telefono\n\t\tescuela=x.escuela\n\t\tfecha=x.fecha\n\n    \ttitulo = "Listado de asistencia fecha 11/06/2019"\n    \tencabezado = "Primer p\xc3\xa1rrafo"\n    \t\n\n    \tdoc = SimpleDocTemplate("/home/decodigo/Documentos/python/prueba.pdf", pagesize=letter,\n                        rightMargin=72, leftMargin=72,\n                        topMargin=72, bottomMargin=18)\n\t\t\n    \tstory = []\n    \tt = Table([\n        [\'Nombre y Apellido\', \'Dni\', \'Telefono\',\'Escuela\',\'Fecha\',\'Firma\'], \n        [nombre, dni,tel,escuela,fecha,], \n        \n    \t], colWidths=90, rowHeights=30)\n    \tt.setStyle([\n    \t\t(\'GRID\',(0,0),(-1,-1),0.5,colors.grey),\n                       (\'BOX\',(0,0),(-1,-1),2,colors.black),\n                       (\'BACKGROUND\', (0, 0), (-1, 0), colors.grey),\n        \n        \n    \t])\n    \tpass\n\n    \tstory.append(t)\n\tstory.append(Spacer(0,15))\n\tdoc.build(story)\n    \t\n\treturn dict()\n\n   \t\n    \treturn dict()\ndef imprimiendo_fecha1():\n\tfrom reportlab.platypus import *\n\tfrom reportlab.lib.styles import getSampleStyleSheet\n\tfrom reportlab.rl_config import defaultPageSize\n\tfrom reportlab.lib.units import inch, mm\n\tfrom reportlab.lib.enums import TA_LEFT, TA_RIGHT, TA_CENTER, TA_JUSTIFY\n\tfrom reportlab.lib import colors\n\tfrom uuid import uuid4\n\tfrom cgi import escape\n\tfrom reportlab.platypus import (SimpleDocTemplate, PageBreak, Image, Spacer,\n\tParagraph, Table, TableStyle)\n\tfrom reportlab.lib.styles import getSampleStyleSheet\n\tfrom reportlab.lib.pagesizes import A4\n\tfrom reportlab.lib import colors\n\timport os\n\n\t\n\treturn (data,dict())\n\n\t\ndef print_fecha2():\n\treturn dict()\n\nresponse._vars=response._caller(print_fecha1)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.IOError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.IOError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.IOError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'__sizeof__'
+p20
+S'<built-in method __sizeof__ of exceptions.IOError object>'
+p21
+sS'__init__'
+p22
+S"<method-wrapper '__init__' of exceptions.IOError object>"
+p23
+sS'__setattr__'
+p24
+S"<method-wrapper '__setattr__' of exceptions.IOError object>"
+p25
+sS'__reduce_ex__'
+p26
+S'<built-in method __reduce_ex__ of exceptions.IOError object>'
+p27
+sS'__new__'
+p28
+S'<built-in method __new__ of type object>'
+p29
+sS'errno'
+p30
+S'2'
+sS'__format__'
+p31
+S'<built-in method __format__ of exceptions.IOError object>'
+p32
+sS'__class__'
+p33
+S"<type 'exceptions.IOError'>"
+p34
+sS'filename'
+p35
+S"u'/home/decodigo/Documentos/python/prueba.pdf'"
+p36
+sS'__doc__'
+p37
+S"'I/O operation failed.'"
+p38
+sS'__getitem__'
+p39
+S"<method-wrapper '__getitem__' of exceptions.IOError object>"
+p40
+sS'__setstate__'
+p41
+S'<built-in method __setstate__ of exceptions.IOError object>'
+p42
+sS'__getattribute__'
+p43
+S"<method-wrapper '__getattribute__' of exceptions.IOError object>"
+p44
+sS'args'
+p45
+S"(2, 'No such file or directory')"
+p46
+sS'__subclasshook__'
+p47
+S'<built-in method __subclasshook__ of type object>'
+p48
+sS'__unicode__'
+p49
+S'<built-in method __unicode__ of exceptions.IOError object>'
+p50
+sS'strerror'
+p51
+S"'No such file or directory'"
+p52
+sS'__delattr__'
+p53
+S"<method-wrapper '__delattr__' of exceptions.IOError object>"
+p54
+sS'__repr__'
+p55
+S"<method-wrapper '__repr__' of exceptions.IOError object>"
+p56
+sS'__hash__'
+p57
+S"<method-wrapper '__hash__' of exceptions.IOError object>"
+p58
+ssS'evalue'
+p59
+S"[Errno 2] No such file or directory: u'/home/decodigo/Documentos/python/prueba.pdf'"
+p60
+sS'request'
+p61
+cgluon.html
+XML_unpickle
+p62
+(S's\t\\\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>evento</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>imprimir</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-806e7404-a13b-44e7-9efe-fc4bcdafd8d3<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_evento</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-edb718aa-31b9-4ac2-997b-e1fc0ca156b8<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-542cbb8c-f487-4964-881d-ce009dac8a82<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>es-ES,es;q=0.9,en;q=0.8,gl;q=0.7</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CACHE_CONTROL</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>session_id_admin=127.0.0.1-806e7404-a13b-44e7-9efe-fc4bcdafd8d3; session_id_evento=127.0.0.1-edb718aa-31b9-4ac2-997b-e1fc0ca156b8; session_id_welcome=127.0.0.1-542cbb8c-f487-4964-881d-ce009dac8a82</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_UPGRADE_INSECURE_REQUESTS</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/evento/imprimir/print_fecha1.html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>8703</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>HaTaK3-PC</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;D:\\\\web2py\\\\applications\\\\evento\\\\&#x27;, &#x27;D:\\\\web2py\\\\applications\\\\admin\\\\&#x27;, &#x27;D:\\\\web2py\\\\applications\\\\welcome\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>D:\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x27edd50: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;HaTaK3-PC&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;D:\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>D:\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>es-ES,es;q=0.9,en;q=0.8,gl;q=0.7</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cache_control</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>session_id_admin=127.0.0.1-806e7404-a13b-44e7-9efe-fc4bcdafd8d3; session_id_evento=127.0.0.1-edb718aa-31b9-4ac2-997b-e1fc0ca156b8; session_id_welcome=127.0.0.1-542cbb8c-f487-4964-881d-ce009dac8a82</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_upgrade_insecure_requests</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>HaTaK3-PC</div></td></tr><tr><td><div>10.120.0.69</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>fe80::65c7:8cfe:1866:2ddb%12</div></td></tr><tr><td><div>fe80::6de3:fa60:8d1c:59aa%11</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>192.168.56.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/evento/imprimir/print_fecha1.html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>8703</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/evento/imprimir/print_fecha1.html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>HaTaK3-PC</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>D:\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.14.6-stable+timestamp.2016.05.10.00.21.47</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x012AD0D0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x028EE4C8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x077EC8F0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x012AD0D0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x028EE4C8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x077EC8F0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>D:\\web2py\\applications\\evento\\</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>print_fecha1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;D:\\\\web2py\\\\applications\\\\evento\\\\&#x27;, &#x27;D:\\\\web2py\\\\applications\\\\admin\\\\&#x27;, &#x27;D:\\\\web2py\\\\applications\\\\welcome\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>D:\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x27edd50: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;HaTaK3-PC&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;D:\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>D:\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>HaTaK3-PC</div></td></tr><tr><td><div>10.120.0.69</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>fe80::65c7:8cfe:1866:2ddb%12</div></td></tr><tr><td><div>fe80::6de3:fa60:8d1c:59aa%11</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>192.168.56.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.14.6-stable+timestamp.2016.05.10.00.21.47</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2019, 5, 26, 21, 15, 59, 489000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/evento/imprimir/print_fecha1.html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2019, 5, 27, 0, 15, 59, 489000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x031BE970&gt;</div></td></tr></table></div>'
+tRp63
+sS'frames'
+p64
+(lp65
+(dp66
+S'file'
+p67
+S'D:\\web2py\\gluon\\restricted.py'
+p68
+sS'dump'
+p69
+(dp70
+S'environment'
+p71
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p72
+sS'ccode'
+p73
+S'<code object <module> at 03798338, file "D:\\web2...ications\\evento\\controllers/imprimir.py", line 1>'
+p74
+ssS'lnum'
+p75
+I227
+sS'lines'
+p76
+(dp77
+I224
+S'            ccode = code'
+p78
+sI225
+S'        else:'
+p79
+sI226
+S'            ccode = compile2(code, layer)'
+p80
+sI227
+S'        exec ccode in environment'
+p81
+sI228
+S'    except HTTP:'
+p82
+sI229
+S'        raise'
+p83
+sI230
+S'    except RestrictedError:'
+p84
+sI231
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p85
+sI222
+S'    try:'
+p86
+sI223
+S'        if isinstance(code, types.CodeType):'
+p87
+ssS'call'
+p88
+S"(code='@auth.requires_login()\\ndef imprimir():\\n\\n\\treturn ...)\\n\\nresponse._vars=response._caller(print_fecha1)\\n', environment={'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}, layer=r'D:\\web2py\\applications\\evento\\controllers/imprimir.py')"
+p89
+sS'func'
+p90
+S'restricted'
+p91
+sa(dp92
+g67
+S'D:\\web2py\\applications\\evento\\controllers\\imprimir.py'
+p93
+sg69
+(dp94
+sg75
+I86
+sg76
+(dp95
+I75
+S'\tfrom reportlab.lib.pagesizes import A4'
+p96
+sI76
+S'\tfrom reportlab.lib import colors'
+p97
+sI77
+S'\timport os'
+p98
+sI78
+S''
+sI79
+S''
+sI80
+S'\treturn (data,dict())'
+p99
+sI81
+S''
+sI82
+S''
+sI83
+S'def print_fecha2():'
+p100
+sI84
+S'\treturn dict()'
+p101
+ssg88
+S'()'
+p102
+sg90
+S'<module>'
+p103
+sa(dp104
+g67
+S'D:\\web2py\\gluon\\globals.py'
+p105
+sg69
+(dp106
+S'self'
+p107
+S'undefined'
+p108
+sS'f'
+S'<function print_fecha1>'
+p109
+ssg75
+I417
+sg76
+(dp110
+I416
+S'        self._vars = None'
+p111
+sI417
+S'        self._caller = lambda f: f()'
+p112
+sI418
+S'        self._view_environment = None'
+p113
+sI419
+S'        self._custom_commit = None'
+p114
+sI420
+S'        self._custom_rollback = None'
+p115
+sI421
+S"        self.generic_patterns = ['*']"
+p116
+sI412
+S"        self.flash = ''            # used by the default view layout"
+p117
+sI413
+S'        self.meta = Storage()      # used by web2py_ajax.html'
+p118
+sI414
+S'        self.menu = []             # used by the default view layout'
+p119
+sI415
+S'        self.files = []            # used by web2py_ajax.html'
+p120
+ssg88
+S'(f=<function print_fecha1>)'
+p121
+sg90
+S'<lambda>'
+p122
+sa(dp123
+g67
+S'D:\\web2py\\applications\\evento\\controllers\\imprimir.py'
+p124
+sg69
+(dp125
+sg75
+I57
+sg76
+(dp126
+I52
+S'    \t])'
+p127
+sI53
+S'    \tpass'
+p128
+sI54
+S''
+sI55
+S'    \tstory.append(t)'
+p129
+sI56
+S'\tstory.append(Spacer(0,15))'
+p130
+sI57
+S'\tdoc.build(story)'
+p131
+sI58
+S''
+sI59
+S'\treturn dict()'
+p132
+sI60
+S''
+sI61
+S''
+ssg88
+S'()'
+p133
+sg90
+S'print_fecha1'
+p134
+sa(dp135
+g67
+S'D:\\web2py\\reportlab\\platypus\\doctemplate.py'
+p136
+sg69
+(dp137
+S'BaseDocTemplate.build'
+p138
+S'<unbound method BaseDocTemplate.build>'
+p139
+sS'flowables'
+p140
+S'[]'
+p141
+sS'self'
+p142
+S'<reportlab.platypus.doctemplate.SimpleDocTemplate instance>'
+p143
+sS'global BaseDocTemplate'
+p144
+S'<class reportlab.platypus.doctemplate.BaseDocTemplate>'
+p145
+sS'canvasmaker'
+p146
+S'<class reportlab.pdfgen.canvas.Canvas>'
+p147
+ssg75
+I1292
+sg76
+(dp148
+I1287
+S"                        PageTemplate(id='Later',frames=frameT, onPage=onLaterPages,pagesize=self.pagesize)])"
+p149
+sI1288
+S"        if onFirstPage is _doNothing and hasattr(self,'onFirstPage'):"
+p150
+sI1289
+S'            self.pageTemplates[0].beforeDrawPage = self.onFirstPage'
+p151
+sI1290
+S"        if onLaterPages is _doNothing and hasattr(self,'onLaterPages'):"
+p152
+sI1291
+S'            self.pageTemplates[1].beforeDrawPage = self.onLaterPages'
+p153
+sI1292
+S'        BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)'
+p154
+sI1293
+S''
+sI1294
+S'def progressCB(typ, value):'
+p155
+sI1295
+S'    """Example prototype for progress monitoring.'
+p156
+sI1296
+S''
+ssg88
+S'(self=<reportlab.platypus.doctemplate.SimpleDocTemplate instance>, flowables=[], onFirstPage=<function _doNothing>, onLaterPages=<function _doNothing>, canvasmaker=<class reportlab.pdfgen.canvas.Canvas>)'
+p157
+sg90
+S'build'
+p158
+sa(dp159
+g67
+S'D:\\web2py\\reportlab\\platypus\\doctemplate.py'
+p160
+sg69
+(dp161
+S'self'
+p162
+S'<reportlab.platypus.doctemplate.SimpleDocTemplate instance>'
+p163
+sS'self._endBuild'
+p164
+S'<bound method SimpleDocTemplate._endBuild of <re...platypus.doctemplate.SimpleDocTemplate instance>>'
+p165
+ssg75
+I1083
+sg76
+(dp166
+I1078
+S''
+sI1079
+S''
+sI1080
+S'        #reapply pagecatcher info'
+p167
+sI1081
+S'        canv._doc.info = self._savedInfo'
+p168
+sI1082
+S''
+sI1083
+S'        self._endBuild()'
+p169
+sI1084
+S'        if self._onProgress:'
+p170
+sI1085
+S"            self._onProgress('FINISHED',0)"
+p171
+sI1086
+S''
+sI1087
+S'    def _allSatisfied(self):'
+p172
+ssg88
+S'(self=<reportlab.platypus.doctemplate.SimpleDocTemplate instance>, flowables=[], filename=None, canvasmaker=<class reportlab.pdfgen.canvas.Canvas>)'
+p173
+sg90
+g158
+sa(dp174
+g67
+S'D:\\web2py\\reportlab\\platypus\\doctemplate.py'
+p175
+sg69
+(dp176
+S'self.canv'
+p177
+S'<reportlab.pdfgen.canvas.Canvas instance>'
+p178
+sS'self'
+p179
+S'<reportlab.platypus.doctemplate.SimpleDocTemplate instance>'
+p180
+sS'self.canv.save'
+p181
+S'<bound method Canvas.save of <reportlab.pdfgen.canvas.Canvas instance>>'
+p182
+sS'builtingetattr'
+p183
+S'<built-in function getattr>'
+p184
+ssg75
+I1018
+sg76
+(dp185
+I1013
+S'            self.clean_hanging()'
+p186
+sI1014
+S'        else:'
+p187
+sI1015
+S'            self.clean_hanging()'
+p188
+sI1016
+S'            self.handle_pageBreak()'
+p189
+sI1017
+S''
+sI1018
+S"        if getattr(self,'_doSave',1): self.canv.save()"
+p190
+sI1019
+S'        if self._onPage: self.canv.setPageCallBack(None)'
+p191
+sI1020
+S''
+sI1021
+S'    def build(self, flowables, filename=None, canvasmaker=canvas.Canvas):'
+p192
+sI1022
+S'        """Build the document from a list of flowables.'
+p193
+ssg88
+S'(self=<reportlab.platypus.doctemplate.SimpleDocTemplate instance>)'
+p194
+sg90
+S'_endBuild'
+p195
+sa(dp196
+g67
+S'D:\\web2py\\reportlab\\pdfgen\\canvas.py'
+p197
+sg69
+(dp198
+S'self._doc.SaveToFile'
+p199
+S'<bound method PDFDocument.SaveToFile of <reportlab.pdfbase.pdfdoc.PDFDocument object>>'
+p200
+sS'self'
+p201
+S'<reportlab.pdfgen.canvas.Canvas instance>'
+p202
+sS'self._filename'
+p203
+S"'/home/decodigo/Documentos/python/prueba.pdf'"
+p204
+sS'self._doc'
+p205
+S'<reportlab.pdfbase.pdfdoc.PDFDocument object>'
+p206
+ssg75
+I1242
+sg76
+(dp207
+I1237
+S'    def save(self):'
+p208
+sI1238
+S'        """Saves and close the PDF document in the file.'
+p209
+sI1239
+S'           If there is current data a ShowPage is executed automatically.'
+p210
+sI1240
+S'           After this operation the canvas must not be used further."""'
+p211
+sI1241
+S'        if len(self._code): self.showPage()'
+p212
+sI1242
+S'        self._doc.SaveToFile(self._filename, self)'
+p213
+sI1243
+S''
+sI1244
+S'    def getpdfdata(self):'
+p214
+sI1245
+S'        """Returns the PDF data that would normally be written to a file.'
+p215
+sI1246
+S'        If there is current data a ShowPage is executed automatically.'
+p216
+ssg88
+S'(self=<reportlab.pdfgen.canvas.Canvas instance>)'
+p217
+sg90
+S'save'
+p218
+sa(dp219
+g67
+S'D:\\web2py\\reportlab\\pdfbase\\pdfdoc.py'
+p220
+sg69
+(dp221
+S'builtinopen'
+p222
+S'<built-in function open>'
+p223
+sS'filename'
+p224
+S"u'/home/decodigo/Documentos/python/prueba.pdf'"
+p225
+sS'f'
+g108
+ssg75
+I214
+sg76
+(dp226
+I209
+S"            if isinstance(filename,int): filename = '<os fd:%d>'% filename"
+p227
+sI210
+S'            filename = makeFileName(filename)'
+p228
+sI211
+S'        else :'
+p229
+sI212
+S'            myfile = 1'
+p230
+sI213
+S'            filename = makeFileName(filename)'
+p231
+sI214
+S'            f = open(filename, "wb")'
+p232
+sI215
+S'        data = self.GetPDFData(canvas)'
+p233
+sI216
+S'        if isUnicode(data):'
+p234
+sI217
+S"            data = data.encode('latin1')"
+p235
+sI218
+S'        f.write(data)'
+p236
+ssg88
+S"(self=<reportlab.pdfbase.pdfdoc.PDFDocument object>, filename=u'/home/decodigo/Documentos/python/prueba.pdf', canvas=<reportlab.pdfgen.canvas.Canvas instance>)"
+p237
+sg90
+S'SaveToFile'
+p238
+sasS'pyver'
+p239
+S'Python 2.7.9: D:\\web2py\\web2py.exe (prefix: )'
+p240
+sS'session'
+p241
+g62
+(S's\n\n\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">auth</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">expiration</td><td style="vertical-align:top;">:</td><td><div>3600</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">hmac_key</td><td style="vertical-align:top;">:</td><td><div>bd24ecb0-201a-4daa-abfd-2682dc37555d</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_visit</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2019, 5, 26, 21, 13, 36, 975000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remember_me</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">email</td><td style="vertical-align:top;">:</td><td><div>juan@ulivar.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">first_name</td><td style="vertical-align:top;">:</td><td><div>juan</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">id</td><td style="vertical-align:top;">:</td><td><div>1L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_name</td><td style="vertical-align:top;">:</td><td><div>ulivar</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_id</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">reset_password_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user_groups</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">2</td><td style="vertical-align:top;">:</td><td><div>Administrador</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_orderby</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_query</td><td style="vertical-align:top;">:</td><td><div>db.evento.id&gt;0</div></td></tr></table></div>'
+tRp242
+sS'etype'
+p243
+S"<type 'exceptions.IOError'>"
+p244
+sS'date'
+p245
+S'Sun May 26 21:15:59 2019'
+p246
+sS'response'
+p247
+g62
+(S'sr\x1f\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x077ED860&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_evento</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-edb718aa-31b9-4ac2-997b-e1fc0ca156b8<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap3_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">logo</td><td style="vertical-align:top;">:</td><td><div><a class="navbar-brand" href="http://www.web2py.com/" id="web2py-logo"><b>web<span>2</span>py</b>&trade;&nbsp;</a></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Inicio</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/evento/default/principal</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>REGISTRO AL EVENTO</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/evento/registro/hay</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>DEFINIR CUPOS</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/evento/cupo/cupo</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>IMPRIMIR</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/evento/IMPRIMIR/IMPRIMIR</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>web2py</div></td></tr><tr><td><div>python</div></td></tr><tr><td><div>framework</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^imprimir/\\w+\\.py$</div></td></tr><tr><td><div>^imprimir/print_fecha1/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_evento</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;D:\\\\web2py\\\\applications\\\\evento\\\\sessions\\\\00e\\\\172\\\\127.0.0.1-edb718aa-31b9-4ac2-997b-e1fc0ca156b8&#x27;, mode &#x27;rb+&#x27; at 0x031FC230&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>D:\\web2py\\applications\\evento\\sessions\\127.0.0.1-edb718aa-31b9-4ac2-997b-e1fc0ca156b8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>6bc6374ab3cb3e48a7cf19b78682e196</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-edb718aa-31b9-4ac2-997b-e1fc0ca156b8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_evento</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_locked</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>evento</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">subtitle</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">title</td><td style="vertical-align:top;">:</td><td><div>Evento</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>imprimir/print_fecha1.html</div></td></tr></table></div>'
+tRp248
+sS'locals'
+p249
+(dp250
+S'self'
+p251
+S'<reportlab.pdfbase.pdfdoc.PDFDocument object>'
+p252
+sg35
+S"u'/home/decodigo/Documentos/python/prueba.pdf'"
+p253
+sS'myfile'
+p254
+S'1'
+sS'canvas'
+p255
+S'<reportlab.pdfgen.canvas.Canvas instance>'
+p256
+sssS'traceback'
+p257
+S'Traceback (most recent call last):\n  File "D:\\web2py\\gluon\\restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "D:\\web2py\\applications\\evento\\controllers/imprimir.py", line 86, in <module>\n  File "D:\\web2py\\gluon\\globals.py", line 417, in <lambda>\n    self._caller = lambda f: f()\n  File "D:\\web2py\\applications\\evento\\controllers/imprimir.py", line 57, in print_fecha1\n    doc.build(story)\n  File "reportlab\\platypus\\doctemplate.py", line 1292, in build\n    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)\n  File "reportlab\\platypus\\doctemplate.py", line 1083, in build\n    self._endBuild()\n  File "reportlab\\platypus\\doctemplate.py", line 1018, in _endBuild\n    if getattr(self,\'_doSave\',1): self.canv.save()\n  File "reportlab\\pdfgen\\canvas.py", line 1242, in save\n    self._doc.SaveToFile(self._filename, self)\n  File "reportlab\\pdfbase\\pdfdoc.py", line 214, in SaveToFile\n    f = open(filename, "wb")\nIOError: [Errno 2] No such file or directory: u\'/home/decodigo/Documentos/python/prueba.pdf\'\n'
+p258
+s.

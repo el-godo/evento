@@ -1,0 +1,53 @@
+{{extend 'layout1.html'}}
+<style>
+    #mensaje{
+       background-color:#d8420c
+    }
+    #aceptar{
+       background-color:#6f7aaf
+    }
+    
+    
+</style>
+{{block header}}
+
+{{end}}
+<div class="ibox-content">
+  <script type="text/javascript">
+$(document).ready(function(){
+  
+    $("#myModal").modal('show');
+  
+});
+</script>
+<div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                
+                <i class="fa fa-warning modal-icon"></i>
+                <h3 class="modal-title text-warning"><br></h3>
+                
+            </div>
+            <div class="modal-body">
+                
+                <div class="alert alert-warning"id="mensaje">
+                    <h3><p><strong>DISCULPE PERO YA NO EXISTEN CUPOS DISPONIBLES PARA EL DIA {{=fecha}} INTENTE CON LA OTRA FECHA  </strong><strong> </h3>
+
+                    
+                </div>
+                   
+            </div>
+            <div class="modal-footer">  
+                   
+                 
+                <a href="{{=URL('registro', 'form')}}" class=" btn btn-success btn-xs" id="aceptar" >Aceptar</a>
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+</div>        
+
+
