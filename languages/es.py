@@ -224,6 +224,7 @@
 'Index': 'Índice',
 'ingrese el dni ': 'ingrese el dni ',
 'ingrese el dni sin puntos': 'ingrese el dni sin puntos',
+'INGRESE UN E-MAIL VALIDO': 'INGRESE UN E-MAIL VALIDO',
 'insert new': 'inserte nuevo',
 'insert new %s': 'inserte nuevo %s',
 'Installed applications': 'Aplicaciones instaladas',

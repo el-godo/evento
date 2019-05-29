@@ -70,10 +70,10 @@ def formulario():
     fecha2=int(fecha2)     
     
     form=SQLFORM.factory(
-    Field('nom_ape',label='APELLIDO Y NOMBRE',requires=[IS_LENGTH(40), IS_UPPER()]),
-    Field('telefono',"integer",label='TELEFONO',requires=[IS_LENGTH(40)]),
-    Field('escuela',label='ESCUELA',requires=[IS_LENGTH(80),IS_UPPER()]),    
-    Field('mail',label='E-MAIL',requires=[IS_EMAIL(),IS_UPPER()]),
+    Field('nom_ape',label='APELLIDO Y NOMBRE',requires=[IS_LENGTH(40), IS_UPPER(),IS_NOT_EMPTY(error_message='LLENE EL CAMPO')]),
+    Field('telefono',"integer",label='TELEFONO',requires=[IS_LENGTH(40),IS_NOT_EMPTY(error_message='LLENE EL CAMPO')]),
+    Field('escuela',label='ESCUELA',requires=[IS_LENGTH(80),IS_UPPER(),IS_NOT_EMPTY(error_message='LLENE EL CAMPO')]),    
+    Field('mail',label='E-MAIL',requires=[IS_EMAIL(error_message='INGRESE UN E-MAIL VALIDO'),IS_UPPER(),IS_NOT_EMPTY(error_message='LLENE EL CAMPO')]),
         )
     if form.accepts(request,session):
         if fecha=="11-06-2019":
@@ -89,6 +89,10 @@ def formulario():
                 db.evento.insert(nom_ape=form.vars.nom_ape,dni=dni,mail=form.vars.mail,fecha=fecha,telefono=form.vars.telefono,
                 escuela=form.vars.escuela) 
                 redirect(URL(c='registro',f='aceptado',args=[dni,form.vars.nom_ape,form.vars.mail,fecha]))   
+    elif form.errors:
+        response.flash = 'el formulario tiene errores'        
+    else:
+        response.flash = 'por favor complete el formulario'      
 
     return dict(form=form)
 
